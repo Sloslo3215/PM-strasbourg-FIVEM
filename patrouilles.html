@@ -5,27 +5,38 @@
   <title>Gestion des Patrouilles</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="codis-style">
-  <h1>Gestion des Patrouilles</h1>
+<body>
+  <header><h1>Gestion des Patrouilles</h1></header>
+  <main>
+    <form id="patrouilleForm">
+      <label>Nom de la patrouille :</label><br>
+      <input type="text" required><br>
 
-  <!-- Création -->
-  <form id="patrouilleForm">
-    <input type="text" placeholder="Nom de la patrouille" required />
-    <select multiple>
-      <option>Agent 1</option>
-      <option>Agent 2</option>
-    </select>
-    <button>Créer</button>
-  </form>
+      <label>Agents :</label><br>
+      <select multiple>
+        <option>Agent 1</option>
+        <option>Agent 2</option>
+      </select><br>
 
-  <!-- Tableau des patrouilles -->
-  <table>
-    <thead>
-      <tr><th>Patrouille</th><th>Agents</th><th>Statut</th><th>Missions</th></tr>
-    </thead>
-    <tbody>
-      <!-- Dynamique -->
-    </tbody>
-  </table>
+      <button type="submit">Créer Patrouille</button>
+    </form>
+
+    <hr>
+
+    <h2>Liste des patrouilles</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Agents</th>
+          <th>Statut</th>
+          <th>Interventions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- À remplir dynamiquement -->
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>
