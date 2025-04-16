@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestion des Patrouilles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="codis-style">
+  <h1>Gestion des Patrouilles</h1>
+
+  <!-- Création -->
+  <form id="patrouilleForm">
+    <input type="text" placeholder="Nom de la patrouille" required />
+    <select multiple>
+      <option>Agent 1</option>
+      <option>Agent 2</option>
+    </select>
+    <button>Créer</button>
+  </form>
+
+  <!-- Tableau des patrouilles -->
+  <table>
+    <thead>
+      <tr><th>Patrouille</th><th>Agents</th><th>Statut</th><th>Missions</th></tr>
+    </thead>
+    <tbody>
+      <!-- Dynamique -->
+    </tbody>
+  </table>
+</body>
+</html>
