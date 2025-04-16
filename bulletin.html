@@ -2,11 +2,20 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Bulletin de service</title>
-  <link rel="stylesheet" href="style.css"> <!-- Si tu as une feuille de style -->
+  <title>Bulletin de Service</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bulletin de service</h1>
-  <!-- Ton formulaire ou interface ici -->
+  <h1>Bulletin de Service</h1>
+  <!-- Formulaire du bulletin -->
+  <form>
+    <label>Nom de l’agent :</label>
+    <input type="text" required /><br>
+    <label>Heure de prise de service :</label>
+    <input type="time" required /><br>
+    <label>Commentaires :</label><br>
+    <textarea rows="4"></textarea><br>
+    <button type="submit">Enregistrer</button>
+  </form>
 </body>
 </html>
