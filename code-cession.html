@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion utilisateur</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('logoPM.png') no-repeat center center fixed;
+            background-size: 400px;
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.307);
+            z-index: -1;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            display: none;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Connexion utilisateur</h2>
+        <form id="loginForm">
+            <input type="text" id="username" class="input-field" placeholder="Code utilisateur" required>
+            <input type="password" id="password" class="input-field" placeholder="Mot de passe" required>
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+        <p class="error-message">Code utilisateur ou mot de passe incorrect</p>
+        <p class="success-message">Bienvenue ! Connexion réussie.</p>
+    </div>
+
+    <script>
+        // Fonction de gestion de la soumission du formulaire
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêcher la soumission du formulaire par défaut
+
+            // Récupération des valeurs du formulaire
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Vérification des informations de connexion
+            if (username === "CSU" && password === "CSU67") {
+                // Connexion réussie
+                document.querySelector(".success-message").style.display = "block";
+                document.querySelector(".error-message").style.display = "none";
+
+                // Simuler la redirection ou l'accès à la page protégée
+                setTimeout(() => {
+                    // Redirection vers une autre page (par exemple : dashboard.html)
+                    window.location.href = "dashboard.html"; // Remplacez "dashboard.html" par votre page cible
+                }, 2000);
+            } else {
+                // Connexion échouée
+                document.querySelector(".error-message").style.display = "block";
+                document.querySelector(".success-message").style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
